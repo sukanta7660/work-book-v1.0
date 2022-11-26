@@ -1,12 +1,10 @@
 /* eslint-env node */
 require("@rushstack/eslint-patch/modern-module-resolution");
-const process = require('.eslintrc');
 
 module.exports = {
   root: true,
   env: {
-    node: true,
-    NODE_ENV: undefined
+    node: true
   },
   extends: [
     "plugin:vue/vue3-essential",
