@@ -1,10 +1,17 @@
 <template>
-  <NavComp />
-  <v-main> </v-main>
+  <v-card class="mx-auto" max-width="448">
+    <v-layout>
+      <NavComp />
+
+      <v-main>
+        <RouterView />
+      </v-main>
+    </v-layout>
+  </v-card>
 </template>
 
 <script setup>
-// import { RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
 import NavComp from './components/utils/Nav.vue';
 </script>
 

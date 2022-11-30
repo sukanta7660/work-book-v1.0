@@ -1,28 +1,18 @@
 <template>
-  <v-app id="inspire">
-    <v-main class="grey lighten-3">
-      <v-form>
-        <v-card color="">
-          <v-card-text>
-            <v-text-field label="Username" />
-            <v-text-field label="Password" type="password" />
-          </v-card-text>
-          <v-card-actions>
-            <v-btn type="submit"> Login </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-form>
-    </v-main>
-  </v-app>
+  <v-container class="bg-surface-variant">
+    <v-row no-gutters>
+      <v-col v-for="n in 3" :key="n" cols="12" sm="4">
+        <v-sheet class="ma-2 pa-2"> One of three columns </v-sheet>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 export default {
   name: 'LoginComp',
   data() {
-    return {
-      state: 0,
-    };
+    return {};
   },
 };
 </script>
