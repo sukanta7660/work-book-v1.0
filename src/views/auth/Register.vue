@@ -1,9 +1,9 @@
 <template>
   <v-container fluid fill-height>
-    <v-layout align-center justify-center>
-      <v-flex xs12 sm8 md4>
-        <v-card class="elevation-12">
-          <v-toolbar dark color="primary">
+    <v-row>
+      <v-col cols="6">
+        <v-card class="elevation-1">
+          <v-toolbar dark color="info">
             <v-toolbar-title
               >{{
                 isRegister ? stateObj.register.name : stateObj.login.name
@@ -44,15 +44,9 @@
                 required
               ></v-text-field>
               <div class="red--text">{{ errorMessage }}</div>
-              <v-btn
-                type="submit"
-                class="mt-4"
-                color="primary"
-                value="log in"
-                >{{
-                  isRegister ? stateObj.register.name : stateObj.login.name
-                }}</v-btn
-              >
+              <v-btn type="submit" class="mt-4" color="info" value="log in">{{
+                isRegister ? stateObj.register.name : stateObj.login.name
+              }}</v-btn>
               <div
                 class="grey--text mt-4"
                 v-on:click="isRegister = !isRegister"
@@ -62,8 +56,8 @@
             </form>
           </v-card-text>
         </v-card>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -80,7 +74,7 @@ export default {
       stateObj: {
         register: {
           name: 'Register',
-          message: 'Aleady have an Acoount? login.',
+          message: 'Already have an Account? login.',
         },
         login: {
           name: 'Login',

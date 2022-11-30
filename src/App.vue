@@ -1,8 +1,7 @@
 <template>
-  <v-card class="mx-auto" max-width="448">
+  <v-card class="mx-auto" outlined="false">
     <v-layout>
       <NavComp />
-
       <v-main>
         <RouterView />
       </v-main>
