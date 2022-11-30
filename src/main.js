@@ -2,8 +2,6 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
-import './assets/main.css';
-
 const app = createApp(App);
 
 // Vuetify
@@ -19,4 +17,10 @@ const vuetify = createVuetify({
 
 app.use(router);
 
-app.use(vuetify).mount('#app');
+app
+  .use(vuetify, {
+    theme: {
+      primary: '#076c80',
+    },
+  })
+  .mount('#app');
