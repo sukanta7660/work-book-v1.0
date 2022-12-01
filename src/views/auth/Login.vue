@@ -1,18 +1,29 @@
 <template>
-  <v-container class="bg-surface-variant">
-    <v-row no-gutters>
-      <v-col v-for="n in 3" :key="n" cols="12" sm="4">
-        <v-sheet class="ma-2 pa-2"> One of three columns </v-sheet>
-      </v-col>
-    </v-row>
-  </v-container>
+  <h1>Login Page</h1>
 </template>
 
 <script>
+import { onMounted, reactive } from 'vue';
+
 export default {
   name: 'LoginComp',
-  data() {
-    return {};
+  components: {},
+  setup: function () {
+    const state = reactive({
+      loginForm: {
+        name: '',
+        email: '',
+        phone: '',
+      },
+    });
+
+    onMounted(() => {
+      //
+    });
+    return {
+      state,
+    };
   },
 };
 </script>
+<style scoped></style>

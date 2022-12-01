@@ -1,12 +1,6 @@
 <template>
-  <v-card class="mx-auto" outlined="false">
-    <v-layout>
-      <NavComp />
-      <v-main>
-        <RouterView />
-      </v-main>
-    </v-layout>
-  </v-card>
+  <NavComp />
+  <RouterView />
 </template>
 
 <script setup>
