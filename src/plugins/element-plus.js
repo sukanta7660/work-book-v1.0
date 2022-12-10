@@ -5,4 +5,3 @@ import 'element-plus/dist/index.css';
 const app = createApp({});
 
 app.use(ElementPlus);
-app.mount('#app');
